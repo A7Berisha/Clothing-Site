@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+
+<div class = 'row mt-5'>
+    <div class = 'greyBorder col-6 mx-auto rounded mb-5'>
+        <h1 class = 'text-white text-center mt-4'><%= post.name %></h1>
+        <div class = 'card col-6 backThrough mx-auto'>
+            <img class = 'card-img-top' src = '<%=post.image %>'>
+        </div>
+        <div class = 'mt-3'>            
+            <p class = 'text-white text-center mb-2'>Date Posted: <%= post.date.toDateString() %> </p>
+            <p class = 'text-white text-center'>Price: $<%= post.price %></p>            
+            <p class = 'text-white text-center'><%= post.description %> </p>
+            <h5 class = 'text-white text-center'>Contact Information</h5>
+            <p class = 'text-white text-center mb-2'>Email: <%= post.email %></p>
+            <p class = 'text-white text-center'>Phone number: <%= post.number %></p>
+            <div class = 'text-center mb-2'>
+                <a class = 'btn btn-md greenBack text-white' href = '/posts/<%= post.id %>/edit'>Edit</a>
+                <form class = 'd-inline' method = 'POST' action = '/posts/<%= post.id %>?_method=DELETE'>
+                    <button type = 'submit' class = 'btn btn-md redBack text-white'>Delete</button>
+                </form>  
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<%- include('partials/footer') %>

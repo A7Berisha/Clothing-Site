@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+
+    <div class = 'text-center row mx-3 pb-3'>
+        <div id = 'indexJumbo' class = 'jumbotron col-12'>
+            <h1 class = 'text-white'> Welcome to ClothingSite</h1>
+            <p class = 'text-white'>We are the premier name in online second hand clothing. Feel free to search through our listings and spend tons of time on the site. Also make sure to spend lots of time and money on the site. Happy shopping!</p>
+        </div>
+
+
+        <% posts.forEach(function(post){ %>
+        <div class = 'col-12 col-sm-6 col-md-3 my-3'>
+            <div class = 'mx-2 greyBorder rounded '>
+                <h2 class = 'text-white'> <%= post.name %> </h2>
+                <div class = 'card backThrough mx-2'>
+                    <img class = 'card-img-top'src = '<%= post.image %>'>
+                    <div class = 'card-body'>
+                        <div class = 'backThrough'>
+                            <p class = 'text-white'> Listed Price: $<%= post.price %></p>
+                        </div>
+                        <p class = 'card-title text-white'> <%= post.description.substring(0,50) %>. . .</p>
+                        <a class = 'btn btn-md greenBack text-white' href  = '/posts/<%= post._id %>'>More info</a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <% }) %>
+    </div>
+
+
+
+<%- include('partials/footer') %>

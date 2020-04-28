@@ -1,0 +1,56 @@
+body {
+    background: rgb(0,100,25);
+    background: linear-gradient(180deg, rgba(0,100,25,1) 0%, rgba(0,0,0,1) 100%);
+    background-repeat:no-repeat;
+    background-size: 100%;
+}
+
+#indexMainDiv {
+    height:1200px;
+}
+
+.greenBack {
+    background-color:rgb(0,100,25);
+    transition-duration:250ms;
+}
+
+.greenBack:hover {
+    background-color:rgb(20,130,40);
+} 
+
+.redBack {
+    background-color:rgb(196,0,0);
+    transition-duration:250ms;
+}
+
+.redBack:hover {
+    background-color:rgb(220, 12, 12);
+}
+
+.backThrough {
+    background-color:rgba(0,0,0,0); 
+}
+
+.greyBorder {
+    border:1.2px solid grey;
+}
+
+#indexJumbo {
+    background-color:rgba(255,255,255,0.2);
+}
+
+.textDancing {
+    font-family:'Dancing Script', cursive;
+    font-size:1.5rem;
+}
+
+.navHover {
+    transition-duration:500ms;    
+    border-radius:0.4rem;
+}
+
+.navHover:hover {
+    background-color:black;
+}
+
+

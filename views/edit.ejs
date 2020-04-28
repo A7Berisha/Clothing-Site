@@ -1,0 +1,59 @@
+<%- include('partials/header') %>
+
+<div id = 'indexJumbo' class = 'jumbotron text-center mx-5'>
+    <h1 class = 'text-white'> Edit a Post</h1>
+    <p class = 'text-white'>Want to edit a posting? Change the information below.</p>
+</div>
+
+
+<div class = 'greyBorder rounded mx-4 mb-5'>
+    <h2 class = 'text-center text-white mt-4'> Posting Information</h2>
+    <form method = 'POST' action = '/posts/<%= post.id %>?_method=PUT'>
+        <div class = 'col-11 col-sm-9 col-md-6 mx-auto'>
+
+            <div class = 'form-group'>
+                <label class = 'text-white' for = 'name'> Name of Article of Clothing</label>
+                <input class = 'form-control' name = 'post[name]' id = 'name'  type = 'text' value = '<%= post.name %>'>
+            </div>
+            
+            <div class = 'form-group mb-2'>
+                <label class = 'text-white' for = 'price'> Price of Clothing</label>
+                <input class = 'form-control' name = 'post[price]' id = 'price'  type = 'number' value = '<%= post.price %>'>
+                <label class = 'text-muted mb-0'>The amount selected will be in CAD (Canadian Dollars).</label>
+            </div>
+            
+            <div class = 'form-group'>
+                <label class = 'text-white' for = 'image'> Image Url</label>
+                <input class = 'form-control' name = 'post[image]' id = 'image'  type = 'text' value = '<%= post.image %>'>
+            </div>
+
+            <h3 class = 'text-white text-center'> Contact Information</h3>
+            <p class = 'text-white text-center'>This information is for people who are looking to buy something that you have posted. Please try not to use a personal email or phone number.</p>
+
+            <div class = 'form-group'>
+                <label class = 'text-white' for = 'email'> Contact Email</label>
+                <input class = 'form-control' name = 'post[email]' id = 'email'  type = 'email' value = '<%= post.email %>'>
+            </div>
+
+            <div class = 'form-group'>
+                <label class = 'text-white' for = 'number'> Contact Number</label>
+                <input class = 'form-control' name = 'post[number]' id = 'number'  type = 'tel' value = '<%= post.number %>' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'>
+            </div>
+
+            <div class = 'form-group'>
+                <label class = 'text-white' for = 'description'> Description of Clothes</label>
+                <textarea class = 'form-control' name = 'post[description]' id = 'description' placeholder = 'Description of clothes here...'><%= post.description %></textarea>
+            </div>
+
+            
+            <button class = 'btn btn-md greenBack mx-auto d-block mb-4 text-white' type = 'submit'> Submit </button>
+
+        </div>
+
+
+    </form>
+</div>
+
+
+
+<%- include('partials/footer') %>
