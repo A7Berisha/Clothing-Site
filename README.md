@@ -1,7 +1,7 @@
 # Clothing-Site
 A second-hand clothes shopping site built using Node.js and MongoDB.
 
-This project is a site for people looking to buy or sell their second-hand clothes. 
+<h1> Hello there </h1>This project is a site for people looking to buy or sell their second-hand clothes. 
 People are able to add explore existing posts, add their own posts, delete posts and edit posts.
 This was built using Node.js, MongoDB, JavaScript, HTML, CSS, and Bootstrap 4. 
 
